@@ -1,12 +1,14 @@
 import { ABI } from './abi'
 const contract = "0xE2a66563b155E2758fa9C0fE52cd63922383259B"
 
+import {useConnex} from "/ConnexContext"
+
+const {thor, vendor} = useConnex()
 
 const connex = new Connex({
-  node: 'https://vethor-node-test.vechaindev.com',
+  node: 'https://vethor-node-test.vechaindev.com',s
   network: 'test'
 })
-
 
 var userlogin = false
 var loginbtn = document.querySelector('#login-btn')
@@ -86,5 +88,7 @@ readbtn.onclick = async () => {
       contractnumber.innerHTML = "failed to fetch"
     }
 
+
+    
 }
 
